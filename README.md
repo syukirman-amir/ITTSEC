@@ -5,7 +5,7 @@ tentang Pemenang lomba hacking ITTSec - CTF 2025
 
 ![ITTSEC](ITTSEC.png)
 
-saya penasaran dengan lombanya, terumata dengan soal ctfnya.
+saya penasaran dengan lombanya, terutama dengan soal ctfnya.
 ketika saya mengecek ternyata web lombanya sudah ditutup. 
 padahal saya penasaran dengan soal ctfnya. 
 
@@ -115,7 +115,7 @@ async function generateHmac(data) {
 
 kalau dilihat dari kode enkripsi, terdapat 2 variable yaitu ```AES_KEY``` dan ```AES_IV```  
 
-keduanya mengambil hasil dari variable ```getConstant``` yang dimana itu adalah kunci/key enkripsinya. 
+keduanya mengambil hasil dari variable ```getConstant``` yang dimana itu sepertinya adalah kunci/key enkripsinya. 
 
 ```javascript
 const getConstant = (idx) => {
@@ -135,7 +135,7 @@ kode ini merupakan ```array```
 [77, 121, 83, 117, 112, 101, 114, 83, 101, 99, 114, 101, 116, 75, 51, 121],
 [73, 110, 105, 116, 105, 97, 108, 86, 101, 99, 116, 111, 114, 49, 50, 51]
 ```
-jadi kita tinggal mengembalikan nilai dari aaray tersebut menjadi plaintext yang bisa dibaca 
+jadi kita tinggal mengembalikan nilai dari array tersebut menjadi plaintext yang bisa dibaca 
 ```python
 c = [
     [77, 121, 83, 117, 112, 101, 114, 83, 101, 99, 114, 101, 116, 75, 51, 121],
