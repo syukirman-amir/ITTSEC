@@ -45,7 +45,7 @@ terdapat 2 parameter yang dikirim yaitu : ```encrypted_data``` dan ```hmac```
 ```encrypted_data -> base64``` dan ```hmac -> SHA256-HEX```
 
 tetapi ini bukan base64 yang normal, ini base64 yang telah di enkripsi berdasarkan kunci/key. 
-ini seperti soal no 3 yang bisa dimanipulasi nilai parameternya melalui post method. hanya saja nilai/valeu-nya telah di enkripsi dengan key. 
+ini seperti soal no 3 yang bisa dimanipulasi nilai parameternya melalui post method. hanya saja nilai/value-nya telah di enkripsi dengan key. 
 
 bagaimana bisa mengetahuinya? terpadat file javascript ```https://web4.ittsec.net/js/crypto-utils.js```
 
@@ -250,7 +250,7 @@ hmac_hex = "8a0e1fa3ee2c4b9dc2741f9b49d97850d79d8a6a7e5d33a091ee3b7101600648" # 
 hmac_verify = bytes.fromhex(hmac_hex)
 
 key = b'MySuperSecretK3y' # kunci - key
-msg = b'Ok66+Xyjx6wSPsZ+TVMVcg=='  # value dari param encrypted_data
+msg = b'Ok66+Xyjx6wSPsZ+TVMVcg=='  # value dari param encrypted_data yang telah kita enkripsi dengan kunci yaitu : damage=100
 
 calc = hmac.new(key, msg, hashlib.sha256).digest()
 
@@ -298,7 +298,7 @@ cipher_b64 = Ok66+Xyjx6wSPsZ+TVMVcg==
 hmac_hex  = e97d3574cb429b5eab171d296bbb83468dbc727494ae53aed6dbbcc1c688f24d
 ```
 
-Sekarang kita menngecek apakah enksirpsi base64 dan hmacnya cocok atau tidak. 
+Sekarang kita mengecek apakah enksirpsi base64 dan hmacnya cocok atau tidak. 
 ```python
 import hmac, hashlib
 
