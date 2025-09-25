@@ -376,7 +376,7 @@ try:
         if flag_div:
             flag_content = flag_div.text.strip()
             print("Isi flag berhasil diambil:")
-            # Mencetak teks dalam warna hijau
+
             print(f"{Fore.GREEN}{flag_content}{Style.RESET_ALL}")
             print("")
         else:
@@ -388,8 +388,6 @@ try:
 
 except requests.exceptions.RequestException as e:
     print("Request gagal:", e)
-except ImportError:
-    print("Dependencies belum terinstal. Jalankan 'pip install beautifulsoup4 colorama' di terminal.")
 
 ```
 
